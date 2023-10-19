@@ -96,14 +96,14 @@
                 </div>
 
                 <button type="submit"
-                    class="flex w-full justify-center rounded-full bg-green-600 mt-8 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
+                    class="flex w-full justify-center rounded-sm bg-green-800 mt-8 px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
                     Create Account
                 </button>
             </form>
 
             <p class="text-center text-sm text-gray-500 font-mono">
                 Already have an account?
-                <a href="{{ route('login') }}" class="font-semibold leading-6 text-green-600 hover:text-green-500">
+                <a href="{{ route('login') }}" class="font-semibold leading-6 text-green-700 hover:text-green-600">
                     Login to your account
                 </a>
             </p>
