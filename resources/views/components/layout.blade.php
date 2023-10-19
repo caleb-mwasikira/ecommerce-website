@@ -10,13 +10,20 @@
     <meta name="description" content="Online shop">
     <meta name="keywords" content="online shop, shop, buy, handmade, environmentally, friendly">
 
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    {{-- Tailwind CDN, Custom CSS --}}
+    {{-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" /> --}}
+    <link rel="stylesheet" href="/css/tailwind.min.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+    {{-- Fonts --}}
+    {{-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet"> --}}
+
+    {{-- Alpine JS CDN --}}
+    {{-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
+    <script src="/js/alpine.min.js"></script>
 </head>
 
-<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+<body class="bg-white text-gray-600 font-fam leading-normal text-base tracking-normal">
 
     @include('partials.navbar')
 
@@ -74,7 +81,21 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    {{-- Display success message ahide it after n seconds --}}
+    @if (session('success'))
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 8000)" x-show="show"
+            class="absolute bottom-5 right-5 text-white text-bold text-sm px-6 py-2 text-center rounded-full bg-green-600">
+            <p class="font-mono">{{ session('success') }}</p>
+        </div>
+    @endif
+
+    {{-- Display fail message and hide it after n seconds --}}
+    @if (session('fail'))
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 8000)" x-show="show"
+            class="absolute bottom-5 right-5 text-white text-bold text-sm px-6 py-2 text-center rounded-full bg-red-600">
+            <p class="font-mono">{{ session('fail') }}</p>
+        </div>
+    @endif
 </body>
 
 </html>

@@ -1,5 +1,10 @@
-.work-sans {
-    font-family: "Work Sans", sans-serif;
+@font-face {
+    font-family: "Catamaran";
+    src: url("/fonts/Catamaran/Catamaran-Regular.ttf");
+}
+
+.font-fam {
+    font-family: "Catamaran", "Work Sans", sans-serif;
 }
 
 #menu-toggle:checked + #menu {

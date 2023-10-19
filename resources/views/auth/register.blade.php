@@ -32,18 +32,35 @@
             <form action="/register" method="POST">
                 @csrf
                 <div class="space-y-2">
-                    <div>
-                        <label for="username" class="block text-sm font-medium leading-6 text-gray-900">
-                            Username
-                        </label>
-                        <div class="mt-2">
-                            <input id="username" name="username" type="text" placeholder="Enter your username"
-                                value="{{ old('username') }}" required
-                                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                        <div>
+                            <label for="firstname" class="block text-sm font-medium leading-6 text-gray-900">
+                                Firstname
+                            </label>
+                            <div class="mt-2">
+                                <input id="firstname" name="firstname" type="text" placeholder="Enter your firstname"
+                                    value="{{ old('firstname') }}" required
+                                    class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6">
 
-                            @error('username')
-                                <div class="text-xs text-red-500">{{ $message }}</div>
-                            @enderror
+                                @error('firstname')
+                                    <div class="text-xs text-red-500">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="lastname" class="block text-sm font-medium leading-6 text-gray-900">
+                                Lastname
+                            </label>
+                            <div class="mt-2">
+                                <input id="lastname" name="lastname" type="text" placeholder="Enter your lastname"
+                                    value="{{ old('lastname') }}" required
+                                    class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6">
+
+                                @error('lastname')
+                                    <div class="text-xs text-red-500">{{ $message }}</div>
+                                @enderror
+                            </div>
                         </div>
                     </div>
 
@@ -54,7 +71,7 @@
                         <div class="mt-2">
                             <input id="email" name="email" type="email" placeholder="Enter your email"
                                 autocomplete="email" value="{{ old('email') }}" required
-                                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6">
 
                             @error('email')
                                 <div class="text-xs text-red-500">{{ $message }}</div>
@@ -69,7 +86,7 @@
 
                         <div class="mt-2">
                             <input id="password" name="password" type="password" placeholder="********" required
-                                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6">
 
                             @error('password')
                                 <div class="text-xs text-red-500">{{ $message }}</div>
@@ -79,14 +96,14 @@
                 </div>
 
                 <button type="submit"
-                    class="flex w-full justify-center rounded-full bg-indigo-600 mt-8 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    class="flex w-full justify-center rounded-full bg-green-600 mt-8 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
                     Create Account
                 </button>
             </form>
 
             <p class="text-center text-sm text-gray-500 font-mono">
                 Already have an account?
-                <a href="{{ route('login') }}" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                <a href="{{ route('login') }}" class="font-semibold leading-6 text-green-600 hover:text-green-500">
                     Login to your account
                 </a>
             </p>
