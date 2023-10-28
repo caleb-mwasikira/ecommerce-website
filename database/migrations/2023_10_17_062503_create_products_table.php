@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->decimal("price");
+            $table->decimal("price", 8, 2, true);
             $table->text("description");
-            $table->integer("quantity_in_stock")->default(0);
+            $table->integer("quantity_in_stock", false, true)->default(0);
+            $table->integer("reorder_point", false, true)->default(0);
             $table->foreignId("category_id");
             $table->foreignId("supplier_id");
-            $table->string("img_src")->nullable();
+            $table->foreignId("media_id");
             $table->softDeletes();
             $table->timestamps();
         });
