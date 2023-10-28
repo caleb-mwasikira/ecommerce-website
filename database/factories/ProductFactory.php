@@ -19,28 +19,21 @@ class ProductFactory extends Factory
     {
         $categoryIds = DB::table("categories")->pluck("id");
         $userIds = DB::table("users")->pluck("id");
-        $imgSrcUrls = [
-            "/images/ian-kiragu-GSh_PwsZsPQ-unsplash.jpg",
-            "/images/mediamodifier-7cERndkOyDw-unsplash.jpg",
-            "/images/pablo-lancaster-jones-9ay2Q3-NKCI-unsplash.jpg",
-            "/images/pablo-lancaster-jones-NymiJ3ZHsQo-unsplash.jpg",
-            "/images/pablo-lancaster-jones-rYIru_nEXmo-unsplash.jpg",
-            "/images/mnz-ToLMORRb97Q-unsplash.jpg",
-            "/images/tu-tu-QZGQO3NvsLo-unsplash.jpg",
-            "/images/heather-ford-5gkYsrH_ebY-unsplash.jpg",
-        ];
+        $mediaIds = DB::table("media")->pluck("id");
 
         $isSoftDeleted = fake()->boolean();
         $deletedAtDate = $isSoftDeleted ? fake()->dateTime()->format('Y-m-d H:i:s') : null;
+        $reorderPoint = 20;
 
         return [
             "name" => ucwords(fake()->words(2, true)),
-            "price" => fake()->randomFloat(2, 100, 5000),
+            "price" => fake()->randomFloat(2, 100, 1000),
             "description" => fake()->realText(),
             "quantity_in_stock" => fake()->randomNumber(3),
-            "img_src" => fake()->randomElement($imgSrcUrls),
+            "reorder_point" => $reorderPoint,
             "category_id" => fake()->randomElement($categoryIds),
             "supplier_id" => fake()->randomElement($userIds),
+            "media_id" => fake()->randomElement($mediaIds),
             "deleted_at" => $deletedAtDate,
         ];
     }
