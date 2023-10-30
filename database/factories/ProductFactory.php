@@ -23,14 +23,10 @@ class ProductFactory extends Factory
 
         $isSoftDeleted = fake()->boolean();
         $deletedAtDate = $isSoftDeleted ? fake()->dateTime()->format('Y-m-d H:i:s') : null;
-        $reorderPoint = 20;
 
         return [
             "name" => ucwords(fake()->words(2, true)),
             "price" => fake()->randomFloat(2, 100, 1000),
-            "description" => fake()->realText(),
-            "quantity_in_stock" => fake()->randomNumber(3),
-            "reorder_point" => $reorderPoint,
             "category_id" => fake()->randomElement($categoryIds),
             "supplier_id" => fake()->randomElement($userIds),
             "media_id" => fake()->randomElement($mediaIds),

@@ -15,9 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->decimal("price", 8, 2, true);
-            $table->text("description");
-            $table->integer("quantity_in_stock", false, true)->default(0);
-            $table->integer("reorder_point", false, true)->default(0);
             $table->foreignId("category_id");
             $table->foreignId("supplier_id");
             $table->foreignId("media_id");
