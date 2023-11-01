@@ -39,17 +39,17 @@ class DatabaseSeeder extends Seeder
         Review::truncate();
         ClothingDescription::truncate();
 
-        Address::factory(10)->create();
+        Address::factory(20)->create();
         User::factory(20)->create();
         Category::factory(10)->create();
-        Order::factory(20)->create();
-        Media::factory(20)->create();
-        Product::factory(20)->create();
-        OrderItem::factory(50)->create();
-        ShoppingCart::factory(20)->create();
-        Transaction::factory(20)->create();
-        Inventory::factory(20)->create();
-        Review::factory(20)->create();
-        ClothingDescription::factory(20)->create();
+        Order::factory(50)->create();
+        Media::factory(50)->create();
+        Product::factory(50)->create();
+        OrderItem::factory(100)->create();
+        ShoppingCart::factory(100)->create();
+        Transaction::factory(50)->create();
+        Inventory::factory(50)->create();
+        Review::factory(100)->create();
+        ClothingDescription::factory(50)->create();
     }
 }
