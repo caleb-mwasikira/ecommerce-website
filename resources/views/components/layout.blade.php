@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title', 'Green Boutique')</title>
+    <title>
+        @yield('title', 'Green Boutique')
+    </title>
+
+    @stack('head')
+
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <meta name="description" content="Online shop">
     <meta name="keywords" content="online shop, shop, buy, handmade, environmentally, friendly">
@@ -83,7 +88,7 @@
     <!-- Display success message ahide it after n seconds -->
     @if (session('success'))
         <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 8000)" x-show="show"
-            class="absolute bottom-5 right-5 text-white text-bold text-sm px-6 py-2 text-center rounded-full bg-green-600">
+            class="sticky bottom-5 left-5 w-64 text-white text-bold text-sm px-6 py-2 text-center rounded-sm bg-green-600">
             <p class="font-mono">{{ session('success') }}</p>
         </div>
     @endif
@@ -91,12 +96,12 @@
     <!-- Display fail message and hide it after n seconds -->
     @if (session('fail'))
         <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 8000)" x-show="show"
-            class="absolute bottom-5 right-5 text-white text-bold text-sm px-6 py-2 text-center rounded-full bg-red-600">
+            class="sticky bottom-5 left-5 w-64 text-white text-bold text-sm px-6 py-2 text-center rounded-sm bg-red-600">
             <p class="font-mono">{{ session('fail') }}</p>
         </div>
     @endif
 
-    @stack("scripts")
+    @stack('scripts')
 
     <!-- Alpine, Flowbite JS -->
     {{-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}

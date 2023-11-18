@@ -20,40 +20,47 @@ use Illuminate\Support\Facades\Route;
  * Product routes
  */
 
-Route::get('/', [ProductController::class, "view_all_products"])
-    ->name("home");
-Route::get('/products', [ProductController::class, "view_all_products"])
-    ->name("view-all-products");
-Route::get('/products/{id}', [ProductController::class, "view_product"])
-    ->whereNumber("id")
-    ->name("view-product");
-Route::get("/products/add", [ProductController::class, "add_product"])
-    ->name("view-add-product-form");
-Route::get("/products/{id}/edit", [ProductController::class, "edit_product"])
-    ->whereNumber("id")
-    ->name("view-edit-product-form");
-Route::post("/products/{id}/reviews/add", [ReviewController::class, "add_review"])
-    ->whereNumber("id")
-    ->name("add_review");
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/', 'view_all_products')
+        ->name("home");
+    Route::get('/products', 'view_all_products')
+        ->name("view-all-products");
+    Route::get("/products/{id}", "view_product")
+        ->whereNumber("id")
+        ->name("view-product");
+    Route::get("/products/add", "add_product")
+        ->name("view-add-product-form");
+    Route::get("/products/{id}/edit", "edit_product")
+        ->whereNumber("id")
+        ->name("view-edit-product-form");
+});
+
+/**
+ * Review routes
+ */
+Route::controller(ReviewController::class)->group(function () {
+    Route::post("/reviews", "add_review")
+        ->name("add-review");
+    Route::delete("/reviews/{review_id}", "delete_review")
+        ->whereNumber("review_id")
+        ->name("delete-review");
+});
 
 /**
  * Authentication routes
  */
-Route::get("/register", function () {
-    return view("auth.register");
-})
+Route::view("/register", "auth.register")
     ->name("register")
     ->middleware("guest");
-Route::post("/register", [AuthController::class, "register"]);
-
-Route::get("/login", function () {
-    return view("auth.login");
-})
+Route::view("/login", "auth.login")
     ->name("login")
     ->middleware("guest");
-Route::post("/login", [AuthController::class, "login"]);
 
-Route::post("/logout", [AuthController::class, "logout"])
-    ->name("logout");
+Route::controller(AuthController::class)->group(function () {
+    Route::post("/register", "register");
+    Route::post("/login", "login");
+    Route::post("/logout", "logout")
+        ->name("logout");
+});
 
 // TODO: Implement the forgot-password feature
