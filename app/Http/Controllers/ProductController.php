@@ -25,7 +25,7 @@ class ProductController extends Controller
 
     public function add_product()
     {
-        return view("products.edit", [
+        return view("products.editor", [
             "product" => null,
             "categories" => Category::all()
         ]);
@@ -34,7 +34,7 @@ class ProductController extends Controller
     public function edit_product(int $productId) {
         $product = Product::findOrFail($productId);
         
-        return view("products.edit", [
+        return view("products.editor", [
             "product" => $product,
             "categories" => Category::all()
         ]);

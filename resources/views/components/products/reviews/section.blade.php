@@ -1,4 +1,4 @@
-@props(['reviews', 'productId'])
+@props(['reviews', 'productId' => null])
 
 @php
     $maxRating = 5;

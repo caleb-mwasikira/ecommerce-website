@@ -1,66 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Ecommerce Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This case study offers a practical and real-world scenario for software engineering students to apply their skills, covering various aspects of software design, development, security, scalability, and maintenance. It also encourages teamwork, project management, and problem-solving.
 
-## About Laravel
+## Activity:
+ Developing an E-Commerce Platform for a Small Business
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Background:
+A small local business, "Green Boutique," specializes in selling handmade and environmentally friendly products, including clothing, accessories, and home goods. Over the years, the business has gained popularity, and the owner, Jane, is looking to expand her customer base by launching an e-commerce platform. Jane envisions a user-friendly online store that will enable customers to browse, purchase, and review products. She has hired your team of software engineering students to design and develop the e-commerce platform.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## System Requirements
 
-## Learning Laravel
+### Product Management:
+- Ability to add, edit, and delete products.
+- Product categorization and organization.
+- Support for different product types (physical goods, digital downloads, services).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Shopping Cart:
+- User-friendly shopping cart for adding and managing selected items.
+- Clear display of product details, prices, and quantities.
+- Real-time updates on cart contents.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### User Authentication and Account Management:
+- User registration and account creation.
+- Secure login and authentication.
+- Ability to delete account and associated account data
+- User profiles with order history.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Checkout Process:
+- Smooth and intuitive checkout process.
+- Multiple payment options (credit cards, digital wallets, etc.).
+- Secure and encrypted payment processing.
 
-## Laravel Sponsors
+### Order Management:
+- Order confirmation emails.
+- Order tracking and status updates.
+- Ability to view and print order invoices.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Search and Navigation:
+- Efficient search functionality.
+- Filters and sorting options for products.
+- Clear navigation and menu structure.
 
-### Premium Partners
+### Responsive Design:
+- Mobile-friendly and responsive design for a seamless user experience across devices.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Reviews and Ratings:
+- Customer reviews and ratings for products.
+- Ability for customers to leave feedback.
+- Moderation tools to manage reviews.
 
-## Contributing
+### Discounts and Promotions:
+- Ability to apply discounts and promo codes.
+- Support for various discount types (percentage, fixed amount, free shipping).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Shipping and Tax Calculation:
+- Integration with shipping carriers for real-time shipping rates.
+- Automated tax calculation based on customer location.
 
-## Code of Conduct
+### Analytics and Reporting:
+- Integration with analytics tools to track website performance.
+- Reporting on sales, customer behavior, and inventory.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Content Management:
+- Easy content updates through a content management system (CMS).
+- Ability to create and manage blog posts or informational pages.
+
+### Returns and Refunds:
+- Clear policies for returns and refunds.
+- System for handling returns and processing refunds.
+
+### Inventory Management:
+- Real-time tracking of inventory levels.
+- Notifications for low stock or out-of-stock items.
+
+## Scalability:
+- Optimize the platform for high traffic and a growing number of products.
+- Conduct load testing to ensure the system can handle multiple simultaneous users.
+
+
+## Security and Privacy:
+- Ensure secure data transmission and storage.
+- Implement measures to protect user data and financial information.
+- Incorporate user privacy controls and data access restrictions. (authorization)
+- SSL encryption for secure data transmission.
+- PCI compliance for handling payment information securely.
+- Account security features (password recovery, two-factor authentication).
+
+
+## Testing and Quality Assurance:
+- Perform rigorous testing, including unit testing, integration testing, and user acceptance testing.
+- Identify and rectify software defects and vulnerabilities.
+
+## Legal Compliance
+- Compliance with data protection laws (e.g., GDPR).
+- Clearly defined terms of service and privacy policy.
+
+## Documentation:
+- Prepare user manuals and system documentation for both customers and administrators.
+
+## Deployment and Maintenance:
+- Deploy the e-commerce platform to a web server.
+- Set up continuous monitoring and regular maintenance procedures.
+- Provide training to the client's team for ongoing content management.
+
+## Deliverables:
+- Detailed system design documents, including architecture diagrams and database schemas.
+- User-friendly web interface with a fully functional e-commerce platform.
+- Comprehensive user manuals and documentation.
+- A deployment plan and ongoing maintenance schedule.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within the website, please send an e-mail to Caleb Mwasikira at [calebmwasikira@gmail.com](mailto:calebmwasikira@gmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This website is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
